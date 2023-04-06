@@ -4,51 +4,14 @@
 require_once('class.dao.php');
 Class Info extends Dao{
     
-    private $nome_cliente;
-    private $dominio;
-    private $data_inicio;
     private $camp1;
     private $camp2;
     private $camp3;
     private $camp4;
     private $camp5;
-    private $camp6;
-    private $camp7;
-    private $camp8;
-    private $camp9;
-    private $camp10;
-    private $camp11;
-    private $camp12;
-    private $camp13;
-    private $camp14;
-    private $camp15;
-    private $camp16;
-    private $camp17;
-    private $camp18;
-    private $camp19;
-    private $camp20;
-    private $camp21;
 
 
 
-    public function setNomeCliente($nome_cliente){
-        $this->nome_cliente = $nome_cliente;
-    }
-    public function getNomeCliente(){
-        return $this->nome_cliente;
-    }
-    public function setDominio($dominio){
-        $this->dominio = $dominio;
-    }
-    public function getDominio(){
-        return $this->dominio;
-    }
-    public function setDataInicio($data_inicio){
-        $this->data_inicio = $data_inicio;
-    }
-    public function getDataInicio(){
-        return $this->data_inicio;
-    }
     public function setCamp1($camp1){
         $this->camp1 = $camp1;
     }
@@ -122,7 +85,7 @@ Class Info extends Dao{
         return $this->camp12;
     }
     public function setCamp13($camp13){
-        $this->cam13p = $camp13;
+        $this->camp13 = $camp13;
     }
     public function getCamp13(){
         return $this->camp13;
@@ -134,7 +97,7 @@ Class Info extends Dao{
         return $this->camp14;
     }
     public function setCamp15($camp15){
-        $this->cam15 = $camp15;
+        $this->camp15 = $camp15;
     }
     public function getCamp15(){
         return $this->camp15;
@@ -174,6 +137,24 @@ Class Info extends Dao{
     }
     public function getCamp21(){
         return $this->camp21;
+    }
+    public function setCamp22($camp22){
+        $this->camp22 = $camp22;
+    }
+    public function getCamp22(){
+        return $this->camp22;
+    }
+    public function setCamp23($camp23){
+        $this->camp23 = $camp23;
+    }
+    public function getCamp23(){
+        return $this->camp23;
+    }
+    public function setCamp24($camp24){
+        $this->camp24 = $camp24;
+    }
+    public function getCamp24(){
+        return $this->camp24;
     }
 }
 ?>

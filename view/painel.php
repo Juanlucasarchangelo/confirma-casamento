@@ -15,11 +15,11 @@ if(!$_SESSION['usuario']){
 
 <head>
   <meta charset="utf-8">
-  <title>Sistema</title>
+  <title>Sistema - Click</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foΩΩ-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
-  <link rel="stylesheet" href="css/Style.css">
-  <link rel="shortcut icon" href="img/Logo site preto.png">
+  <link rel="stylesheet" href="estilo/estilo.css">
+  <link rel="shortcut icon" href="img/cropped-click-2-scaled-1.jpg">
   <style>
     .foto_perfil{
       border-radius: 100%;
@@ -37,7 +37,7 @@ if(!$_SESSION['usuario']){
 
     <div class="container">
       <a class="navbar-brand text-primary" href="painel.php">
-        <img src="img/Logo site Original.png" width="100px" height="100px" class="">
+        <img src="img/cropped-click-2-scaled-1.jpg" width="100px" height="100px" class="">
         <b></b>
       </a>
 
@@ -55,9 +55,6 @@ if(!$_SESSION['usuario']){
           <li class="nav-item">
             <a class="nav-link" href="cadastroinfo.php">Cadastro</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="novo_user.php">Perfil</a>
-          </li>
 
           <!--Mudar Botão Login -->
 
@@ -72,10 +69,17 @@ if(!$_SESSION['usuario']){
   <!-- Informações do Cliente -->
   <div class="container-fluid">
     <div class="row">
-      <div class="col-xl-3 col-lg-5 col-sm-12 bg-info shadow-lg p-3 mb-5 rounded text-center">
+      <div class="col-xl-3 col-lg-5 col-sm-12 bg-warning shadow-lg p-3 mb-5 rounded text-center">
 
-        <img src="img/Logo site branco.jpg" alt="foto de perfil do usúario" width="120px" height="120px" class="foto_perfil">
+        <?php
+        if($_SESSION['usuario'] == "contato@juanarchangelo.com.br"){
+        echo '<img src="img/juan_programador.jpg" alt="foto de perfil do usúario" width="120px" height="120px" class="foto_perfil">
         <div class="card-body">';
+        }else{
+          echo '<img src="img/Agencia-click-logo-condensado-2-p25569trjaax37biytsxs046mq92s5yqimxga0h1hs.png" alt="foto de perfil do usúario" width="120px" height="120px">
+          <div class="card-body">';
+        }
+        ?>
 
         <h3>Usuário Logado:</h3>
 
@@ -87,7 +91,7 @@ if(!$_SESSION['usuario']){
 
       <div class="col-xl-9 col-lg-8 col-sm-12 card bg-light shadow-lg p-3 mb-5 rounded">
         <?php
-            require_once("../controller/controllerinfo.php");
+            require_once("../controller/controllerInfo.php");
             $objControllerFunc = new controllerInfo();
             $objControllerFunc->getTodosFunc();
         ?>
@@ -100,7 +104,7 @@ if(!$_SESSION['usuario']){
 
       <div class="row">
         <div class="col-md-12 text-center">
-          <p class="mb-2">Juan archangelo © 2023 - Todos os direitos reservados</p>
+          <p class="mb-2">Click Comunicação © 2021 - Todos os direitos reservados</p>
         </div>
       </div>
     </div>
