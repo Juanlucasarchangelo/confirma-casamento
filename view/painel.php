@@ -2,7 +2,7 @@
 
 session_start();
 //include('../controller/verifica_login.php');
-if(!$_SESSION['usuario']){
+if (!$_SESSION['usuario']) {
     header('Location: ../index.php');
     exit;
 }
@@ -14,105 +14,112 @@ if(!$_SESSION['usuario']){
 <html lang="pt-br">
 
 <head>
-  <meta charset="utf-8">
-  <title>Sistema - Click</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foΩΩ-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
-  <link rel="stylesheet" href="estilo/estilo.css">
-  <link rel="shortcut icon" href="img/cropped-click-2-scaled-1.jpg">
-  <style>
-    .foto_perfil{
-      border-radius: 100%;
-    }
-  </style>
+    <meta charset="utf-8">
+    <title>Sistema</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foΩΩ-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link rel="stylesheet" href="css/Style.css">
+    <link rel="shortcut icon" href="img/Logo site preto.png">
+    <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css'>
+    <style>
+        .foto_perfil {
+            border-radius: 100%;
+        }
+    </style>
 </head>
 
 <body style="background-color: #e6e6e6">
 
-  <!-- M e n u - e - L o g o -->
-
-  <nav class="navbar navbar-expand-md navbar-light shadow p-3 bg-white">
-
-    <!-- L o g o t i p o -->
-
     <div class="container">
-      <a class="navbar-brand text-primary" href="painel.php">
-        <img src="img/cropped-click-2-scaled-1.jpg" width="100px" height="100px" class="">
-        <b></b>
-      </a>
-
-      <button class="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse" data-target="#navbar4">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <!-- M e n u - E s c r i t o -->
-
-      <div class="collapse navbar-collapse" id="navbar4">
-        <ul class="navbar-nav ml-auto font-weight-bold">
-          <li class="nav-item">
-            <a class="nav-link" href="painel.php">Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="cadastroinfo.php">Cadastro</a>
-          </li>
-
-          <!--Mudar Botão Login -->
-
-          <li class="nav-item">
-            <a class="nav-link bg-danger text-light" href="../controller/logout.php">SAIR</a>
-          </li>
-
-      </div>
-    </div>
-  </nav>
-
-  <!-- Informações do Cliente -->
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-xl-3 col-lg-5 col-sm-12 bg-warning shadow-lg p-3 mb-5 rounded text-center">
-
-        <?php
-        if($_SESSION['usuario'] == "contato@juanarchangelo.com.br"){
-        echo '<img src="img/juan_programador.jpg" alt="foto de perfil do usúario" width="120px" height="120px" class="foto_perfil">
-        <div class="card-body">';
-        }else{
-          echo '<img src="img/Agencia-click-logo-condensado-2-p25569trjaax37biytsxs046mq92s5yqimxga0h1hs.png" alt="foto de perfil do usúario" width="120px" height="120px">
-          <div class="card-body">';
-        }
-        ?>
-
-        <h3>Usuário Logado:</h3>
-
-          <h6 class="lead" ><strong><?php echo $_SESSION['usuario']; ?></strong></h6>
+        <div class="mail-box">
+            <aside class="sm-side">
+                <div class="user-head">
+                    <a class="inbox-avatar">
+                        <img width="64" hieght="60" src="https://scontent.fpoo5-1.fna.fbcdn.net/v/t39.30808-1/309903872_5434373663282886_179448773102220686_n.jpg?stp=dst-jpg_p200x200&_nc_cat=104&ccb=1-7&_nc_sid=7206a8&_nc_ohc=uGCOCZoS19MAX_o_HvC&_nc_ht=scontent.fpoo5-1.fna&oh=00_AT8ywYX4zie1NbVEFPpZX02yvMLLXrYqj_slrI8qLhJuwA&oe=6355B579">
+                    </a>
+                    <div class="user-name">
+                        <h5><a href="#">Juan Archangelo</a></h5>
+                        <span><a href="#"><?= $_SESSION['usuario']; ?></a></span>
+                    </div>
+                </div>
+                <ul class="inbox-nav inbox-divider">
+                    <li class="active">
+                        <a href="painel.php">painel </a>
+                    </li>
+                    <li>
+                        <a href="cadastroinfo.php"> Cadastro</a>
+                    </li>
+                    <li>
+                        <a href="cadastroinfo.php"> Perfil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link bg-danger text-light" href="../controller/logout.php">Logout</a>
+                    </li>
+                </ul>
+                <div class="inbox-body text-center">
+                    <div class="btn-group">
+                        <a class="btn mini btn-primary" href="novo_user.php">
+                            <i class="fa fa-plus"></i>
+                        </a>
+                    </div>
+                    <div class="btn-group">
+                        <a class="btn mini btn-success" href="https://api.whatsapp.com/send?phone=5519987720695&text=Ol%C3%A1%2C%20gostaria%20de%20falar%20sobre%20seus%20servi%C3%A7os!" target="blanck">
+                            <i class="fa fa-phone"></i>
+                        </a>
+                    </div>
+                    <!-- <div class="btn-group">
+                        <a class="btn mini btn-info" href="javascript:;">
+                            <i class="fa fa-cog"></i>
+                        </a>
+                    </div> -->
+                </div>
+            </aside>
+            <aside class="lg-side">
+                <div class="inbox-head">
+                    <h3>Painel de Controle</h3>
+                    <form action="#" class="pull-right position">
+                        <div class="input-append">
+                            <input type="text" class="sr-input" placeholder="Procurar...">
+                            <button class="btn sr-btn" type="button"><i class="fa fa-search"></i></button>
+                        </div>
+                    </form>
+                </div>
+                <div class="inbox-body">
+                    <table class="table table-inbox table-hover">
+                        <thead>
+                            <tr>
+                                <td class="view-message">Nome</td>
+                                <td class="view-message">Domínio</td>
+                                <td class="view-message">Ação</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php
+                            require_once("../controller/controllerinfo.php");
+                            $objControllerFunc = new controllerInfo();
+                            $objControllerFunc->getTodosFunc();
+                            ?>
+                        </tbody>
+                    </table>
+                </div>
+            </aside>
         </div>
-      </div>
-
-      <!-- Area de listagem-->
-
-      <div class="col-xl-9 col-lg-8 col-sm-12 card bg-light shadow-lg p-3 mb-5 rounded">
-        <?php
-            require_once("../controller/controllerInfo.php");
-            $objControllerFunc = new controllerInfo();
-            $objControllerFunc->getTodosFunc();
-        ?>
-
-      </div>
     </div>
-  </div>
 
-      <!-- F i n a l -->
+    <!-- Footer-->
 
-      <div class="row">
+    <footer class="row bg-light">
         <div class="col-md-12 text-center">
-          <p class="mb-2">Click Comunicação © 2021 - Todos os direitos reservados</p>
+            <p class="mb-2">Juan archangelo © 2022 - Todos os direitos reservados</p>
         </div>
-      </div>
-    </div>
-  </div>
 
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </footer>
 
 </body>
 

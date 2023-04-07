@@ -7634,4 +7634,20 @@ ul {
     padding: 0px;
     margin: 0px;
 }
+
+.banner {
+  background-image: url('../img/retro-camera-copy-space-wedding-beauty-concept.jpg');
+  background-size: cover;
+  height: 500px;
+  position: relative;
+}
+.banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  font-size: 3em;
+}
  
