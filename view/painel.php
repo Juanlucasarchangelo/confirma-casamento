@@ -15,7 +15,7 @@ if (!$_SESSION['usuario']) {
 
 <head>
     <meta charset="utf-8">
-    <title>Sistema</title>
+    <title>Confirma Casamento</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foΩΩ-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
@@ -33,12 +33,12 @@ if (!$_SESSION['usuario']) {
 
 <body style="background-color: #e6e6e6">
 
-    <div class="container">
+    <div>
         <div class="mail-box">
             <aside class="sm-side">
                 <div class="user-head">
                     <a class="inbox-avatar">
-                        <img width="64" hieght="60" src="https://scontent.fpoo5-1.fna.fbcdn.net/v/t39.30808-1/309903872_5434373663282886_179448773102220686_n.jpg?stp=dst-jpg_p200x200&_nc_cat=104&ccb=1-7&_nc_sid=7206a8&_nc_ohc=uGCOCZoS19MAX_o_HvC&_nc_ht=scontent.fpoo5-1.fna&oh=00_AT8ywYX4zie1NbVEFPpZX02yvMLLXrYqj_slrI8qLhJuwA&oe=6355B579">
+                        <img class="rounded-pill" width="64" hieght="60" src="https://avatars.githubusercontent.com/u/50179917?v=4">
                     </a>
                     <div class="user-name">
                         <h5><a href="#">Juan Archangelo</a></h5>
@@ -79,7 +79,7 @@ if (!$_SESSION['usuario']) {
             </aside>
             <aside class="lg-side">
                 <div class="inbox-head">
-                    <h3>Painel de Controle</h3>
+                    <h3>Lista de Confirmados</h3>
                     <form action="#" class="pull-right position">
                         <div class="input-append">
                             <input type="text" class="sr-input" placeholder="Procurar...">
@@ -87,23 +87,12 @@ if (!$_SESSION['usuario']) {
                         </div>
                     </form>
                 </div>
-                <div class="inbox-body">
-                    <table class="table table-inbox table-hover">
-                        <thead>
-                            <tr>
-                                <td class="view-message">Nome</td>
-                                <td class="view-message">Domínio</td>
-                                <td class="view-message">Ação</td>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <?php
-                            require_once("../controller/controllerinfo.php");
-                            $objControllerFunc = new controllerInfo();
-                            $objControllerFunc->getTodosFunc();
-                            ?>
-                        </tbody>
-                    </table>
+                <div class="inbox-body ">
+                    <?php
+                    require_once("../controller/controllerinfo.php");
+                    $objControllerFunc = new controllerInfo();
+                    $objControllerFunc->getTodosFunc();
+                    ?>
                 </div>
             </aside>
         </div>
@@ -111,7 +100,7 @@ if (!$_SESSION['usuario']) {
 
     <!-- Footer-->
 
-    <footer class="row bg-light">
+    <footer class="row bg-danger py-3">
         <div class="col-md-12 text-center">
             <p class="mb-2">Juan archangelo © 2022 - Todos os direitos reservados</p>
         </div>

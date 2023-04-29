@@ -29,23 +29,22 @@ class Dao{
         //monta -se as linhas e colunas da tabela que sera exibida usando tags HTML
         echo 
         
-        '<table>
-        <tr>
-        <td width=40% class="text-left">
-        <p style="display: block"><a href="#modalExemplo" style="color: black" data-toggle="modal" data-target="#modalExemplo' . $row['id_camp'] . '">' . $row['camp1'] . '</a></p>
-        </td>
+        '<div class="row d-flex">
+            <div class="col-3">
+              <p><a href="#modalExemplo" style="color: black" data-toggle="modal" data-target="#modalExemplo' . $row['id_camp'] . '">' . $row['camp1'] . '</a></p>
+            </div>
+            <div class="col-3">
+              <p><a href="#modalExemplo" style="color: black" data-toggle="modal" data-target="#modalExemplo' . $row['id_camp'] . '">' . $row['camp1'] . '</a></p>
+            </div>
+            <div class="col-3">
+              <p><a href="https://' . $row['camp2'] . '" style="color: #0087A5" target="blank">' . $row['camp2'] . '</a></p>
+            </div>
+            <div class="col-3">
+              <p><a href="#modalExemplodel" style="color: red" data-toggle="modal" data-target="#modalExemplodel' . $row['id_camp'] . '">Apagar</a></p>
+            </div>
+          </div>';
 
-        <th class="text-left">
-        <p><a href="https://' . $row['camp2'] . '" style="color: #0087A5" target="blank">' . $row['camp2'] . '</a></p>
-        </th>
-
-        <td class="text-right">
-        <p><a href="#modalExemplodel" style="color: red" data-toggle="modal" data-target="#modalExemplodel' . $row['id_camp'] . '">Apagar</a></p>
-        </td>
-        </tr>        
-        </table>';
-
-        echo ' <hr>     
+        echo '    
         <!-- Modal deletar cliente-->
         <div class="modal fade bd-exemple-modal-xl" id="modalExemplodel' . $row['id_camp'] . '" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 
@@ -357,30 +356,6 @@ class Dao{
   {
     $stmt = $this->mysql->prepare("UPDATE informacoes SET camp1=?,  camp2=?, camp3=?, camp4=?, camp5=?, camp6=?, camp7=?, camp8=?, camp9=?, camp10=?, camp11=?, camp12=?, camp13=?, camp14=?, camp15=?, camp16=?, camp17=?, camp18=?, camp19=?, camp20=?, camp21=?, camp22=?, camp23=?, camp24=? WHERE id_camp=?");
     $stmt->bind_param("sssssssssssssssssssssssss", $camp1, $camp2, $camp3, $camp4, $camp5, $camp6, $camp7, $camp8, $camp9, $camp10, $camp11, $camp12, $camp13, $camp14, $camp15, $camp16, $camp17, $camp18, $camp19, $camp20, $camp21, $camp22, $camp23, $camp24, $id_camp);
-    /*var_dump ($camp1);
-    var_dump ($camp2);
-    var_dump ($camp3);
-    var_dump ($camp4);
-    var_dump ($camp5);
-    var_dump ($camp6);
-    var_dump ($camp7);
-    var_dump ($camp8);
-    var_dump ($camp9);
-    var_dump ($camp10);
-    var_dump ($camp11);
-    var_dump ($camp12);
-    var_dump ($camp13);
-    var_dump ($camp14);
-    var_dump ($camp15);
-    var_dump ($camp16);
-    var_dump ($camp17);
-    var_dump ($camp18);
-    var_dump ($camp19);
-    var_dump ($camp20);
-    var_dump ($camp21);
-    var_dump ($camp22);
-    var_dump ($camp23);
-    var_dump ($camp24);*/
     if ($stmt->execute() == TRUE) {
       header('Location: ../view/painel.php');
     } else {

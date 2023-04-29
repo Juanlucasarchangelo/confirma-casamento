@@ -8,7 +8,7 @@ session_start();
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Sistema Click</title>
+    <title>Confirma Casamento</title>
     <link rel="stylesheet" href="view/estilo/style.css">
     <link rel="shortcut icon" href="view/img/cropped-click-2-scaled-1.jpg">
   </head>
