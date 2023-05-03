@@ -1,4 +1,4 @@
-<footer class="bg-fluid py-3">
+<footer class="bg-secondary py-3">
     <div class="text-center">
         <p>Juan archangelo © 2022 - Todos os direitos reservados</p>
     </div>
