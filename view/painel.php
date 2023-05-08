@@ -11,7 +11,7 @@ if (!$_SESSION['usuario']) {
 
 <html lang="pt-br">
     <?= require 'templates/menu.php' ?>
-    <body class="fundo">
+    <body>
         <div class="container-fluid my-3">
             <div class="row d-flex">
                 <div class="col-3">

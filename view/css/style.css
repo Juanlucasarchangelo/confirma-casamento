@@ -1,5 +1,5 @@
-.fundo{
-  background-color: #e9e9e9;
+body{
+  background-color: #F2CED8;
 }
 
 .banner {
@@ -36,6 +36,14 @@
   font-size: 18px;
 }
 
+footer{
+  background-color: #8C2641;
+}
+
 #formulario{
   background-color: #E3B98F;
+}
+
+.fundo-menu{
+  background-color: #732634;
 }
