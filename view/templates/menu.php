@@ -5,7 +5,7 @@
 
     <!-- Links Bootstrap -->
     <link rel="stylesheet" href="css/Style.css">
-    <link rel="shortcut icon" href="img/Logo site preto.png">
+    <!-- <link rel="shortcut icon" href="img/Logo site preto.png"> -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/e9502bf114.js" crossorigin="anonymous"></script>
 

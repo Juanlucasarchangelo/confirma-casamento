@@ -10,9 +10,8 @@ if (!$_SESSION['usuario']) {
 <!DOCTYPE html>
 
 <html lang="pt-br">
+    <?= require 'templates/menu.php' ?>
     <body class="fundo">
-        <?= require 'templates/menu.php' ?>
-        
         <div class="container-fluid my-3">
             <div class="row d-flex">
                 <div class="col-3">
