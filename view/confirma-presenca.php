@@ -52,7 +52,7 @@
   <div class="container my-5">
     <h1 class="font-custom titulo">Sejam bem-vindos ao nosso site!</h1>
     <p class="texto">Aqui compartilhamos com vocês um pouco da nossa história, dicas de vestimenta e informações importantes sobre a celebração da nossa união. caso queiram nos presentear com algo, elaboramos uma lista com algumas sugestões também.</p>
-    <hr style="color: #392600;">
+    <hr style="color: #392600 ;">
     <p class="texto">Vamos contar à vocês, queridos amigos e familiares, os momentos mais marcantes da nossa história de amor! <br>A contagem regressiva começa, o frio na barriga e toda a ansiedade desse dia tão especial das nossas vidas nos enche de alegria em tê-los ao nosso lado. <br>Vamos juntos celebrarmos esse momento tão especial, o dia em que uniremos nossas almas e corpos para sempre, o dia do nosso casamento.</p>
   </div>
   <div class="container-fluid px-5 py-5 text-center" id="formulario">
