@@ -4,28 +4,34 @@
 
 @section('conteudo')
 
-@include('site.layouts._partials.topo')
+    @include('site.layouts._partials.topo')
 
-<div class="conteudo-pagina">
-    <div class="titulo-pagina">
-        <h1>Login</h1>
-    </div>
-    <div class="informacao-pagina">
-        <h4>formulário de login</h4>
-        <div style="width: 30%; margin-left: auto; margin-right: auto;">
-            <form action="{{ route('site.login')}}" method="POST">
+    <div class="d-flex align-items-center" style="background-color: bisque; width: 100vw; height: 87vh;">
+        <div class="col-4 container text-center" style="background-color: burlywood; padding: 80px">
+            <h1 class="pb-3">Login</h1>
+            <form action="{{ route('site.login') }}" method="POST">
                 @csrf
-                <input type="text" name="usuario" value="{{ old('usuario') }}" placeholder="Usuário..." class="borda-preta">
-                {{ $errors->has('usuario') ? $errors->first('usuario') : ''}}
-                <input type="password" name="senha" value="{{ old('senha') }}" class="borda-preta" placeholder="Senha...">
-                {{ $errors->has('senha') ? $errors->first('senha') : ''}}
-                <button type="submit" class="borda-preta">Acessar</button>
+                <div class="form-floating pb-3">
+                    <input class="form-control" type="text" name="usuario" value="{{ old('usuario') }}" placeholder=" "
+                        class="borda-preta">
+                    <label for="usuario">Usuário</label>
+                    {{ $errors->has('usuario') ? $errors->first('usuario') : '' }}
+                </div>
+                <div class="form-floating pb-3">
+                    <input class="form-control" type="password" name="senha" value="{{ old('senha') }}" class="borda-preta"
+                        placeholder=" ">
+                        <label for="senha">Senha</label>
+                    {{ $errors->has('senha') ? $errors->first('senha') : '' }}
+                </div>
+                <div class="d-flex justify-content-between">
+                    <a href="#" style="color: red">Esqueceu a senha?</a>
+                    <button type="submit" class="btn btn-success">Acessar</button>
+                </div>
             </form>
             {{ isset($erro) && $erro != '' ? $erro : '' }}
         </div>
     </div>
-</div>
 
-@include('site.layouts._partials.footer')
+    @include('site.layouts._partials.footer')
 
 @endsection

@@ -26,7 +26,7 @@ Route::post('/login', 'LoginController@autenticar')->name('site.login');
 /**Agrupamento App */
 Route::middleware('autenticacao:padrao,visitante,p3,p4')->prefix('/app')->group(function () {
     Route::get('/cliente', 'ClienteController@index')->name('app.cliente');
-    Route::get('/home', 'HomeController@index')->name('app.home');
+    Route::get('/dashboard', 'app\DashboardController@index')->name('app.dashboard');
     Route::get('/sair', 'LoginController@sair')->name('app.sair');
     Route::get('/produto', 'ProdutoController@index')->name('app.produto');
 

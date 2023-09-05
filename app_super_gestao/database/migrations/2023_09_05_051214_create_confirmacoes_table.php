@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateConfirmacaosTable extends Migration
+class CreateConfirmacoesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,11 @@ class CreateConfirmacaosTable extends Migration
      */
     public function up()
     {
-        Schema::create('confirmacaos', function (Blueprint $table) {
+        Schema::create('confirmacoes', function (Blueprint $table) {
             $table->id();
             $table->string('nome', 80);
             $table->string('email', 80);
-            $table->integer('cpf');
+            $table->string('cpf', 80);
             $table->timestamps();
         });
     }

@@ -21,6 +21,11 @@ body{
     z-index: -1; /* Colocar o overlay atrás do conteúdo */
   }
 
+  .paddingUB{
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+
   .img-banner{
     border-radius: 100px;
   }
