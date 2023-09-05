@@ -1,0 +1,54 @@
+body{
+    background-color: #F2CED8;
+  }
+  
+  .banner {
+    background-image: url('../img/banner-principal.jpg');
+    background-size: cover;
+    height: 1000px;
+    position: relative;
+    padding: 150px;
+  }
+
+  .img-banner{
+    border-radius: 100px;
+  }
+  
+  .banner-text {
+    top: 60%;
+    left: 40%;
+    color: white;
+    text-align: left;
+    font-size: 60px;
+    color: #392600;
+  }
+  .logo{
+    font-size: 30px;
+    font-family: 'Ephesis', cursive;
+    color: #392600;
+  }
+  .font-custom{
+    font-family: 'Ephesis', cursive;
+  }
+  .titulo{
+    color: #392600;
+    font-size: 50px;
+  }
+  .texto{
+    font-family: 'Ephesis', cursive;
+    font-family: 'Lora', serif;
+    text-transform: initial;
+    font-size: 18px;
+  }
+  
+  footer{
+    background-color: #8C2641;
+  }
+  
+  #formulario{
+    background-color: #E3B98F;
+  }
+  
+  .fundo-menu{
+    background-color: #732634;
+  }
