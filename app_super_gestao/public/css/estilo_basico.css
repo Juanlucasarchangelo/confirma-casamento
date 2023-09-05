@@ -5,9 +5,20 @@ body{
   .banner {
     background-image: url('../img/banner-principal.jpg');
     background-size: cover;
-    height: 1000px;
+    height: 900px;
     position: relative;
-    padding: 150px;
+    padding: 100px;
+  }
+  
+  .banner::before {
+    content: "";
+    background: rgba(0, 0, 0, 0.5); /* Cor e transparência do overlay */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Cobrir toda a largura do container */
+    height: 100%; /* Cobrir toda a altura do container */
+    z-index: -1; /* Colocar o overlay atrás do conteúdo */
   }
 
   .img-banner{
@@ -15,12 +26,10 @@ body{
   }
   
   .banner-text {
-    top: 60%;
-    left: 40%;
-    color: white;
     text-align: left;
-    font-size: 60px;
+    font-size: 80px;
     color: #392600;
+    font-family: 'Ephesis', cursive;
   }
   .logo{
     font-size: 30px;

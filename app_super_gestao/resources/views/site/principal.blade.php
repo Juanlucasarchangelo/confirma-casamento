@@ -8,19 +8,21 @@
 
     <div class="banner d-flex align-items-center">
         <div class="row align-items-center">
-            <div class="col" style="padding-right: 400px">
-                <p>Nosso dia esta chegando</p>
+            <div class="col-6">
+                <p class="font-custom titulo">Nosso dia esta chegando</p>
                 <p class="banner-text">Mabilly and <br> Juan</p>
             </div>
-            <div class="col" style="padding-top: 200px">
-                <img src="{{ asset('img/imagem 1.jpg') }}" width="300" style="border-radius: 100px;">
-            </div>
-            <div class="col">
-                <img src="{{ asset('img/imagem 1.jpg') }}" width="300" style="border-radius: 100px">
-                <p class="text-center">28/09/24</p>
-            </div>
-            <div class="col" style="padding-bottom: 200px">
-                <img src="{{ asset('img/imagem 1.jpg') }}" width="300" style="border-radius: 100px">
+            <div class="col-5 d-flex">
+                <div class="col" style="padding-top: 200px">
+                    <img src="{{ asset('img/imagem 1.jpg') }}" width="300" style="border-radius: 100px;">
+                </div>
+                <div class="col">
+                    <img src="{{ asset('img/imagem 2.jpg') }}" width="300" style="border-radius: 100px">
+                    <p class="text-center logo" style="font-size: 150px; position: absolute;">28/09/24</p>
+                </div>
+                <div class="col" style="padding-bottom: 200px">
+                    <img src="{{ asset('img/imagem 3.jpg') }}" width="300" style="border-radius: 100px">
+                </div>
             </div>
         </div>
     </div>
@@ -41,20 +43,20 @@
             casamento!</p>
         <div class="container">
             <!-- Início Formulário -->
-            <form id="formCadastro" name="formCadastro" action="{{ route('') }}" method="POST">
+            <form action="{{ route('site.principal') }}" method="POST">
+                @csrf
                 <div class="d-flex justify-content-between">
                     <div class="form-floating col-12 col-md-12 col-xl-4">
-                        <input required type="text" class="form-control" id="camp1" name="camp1" placeholder=" ">
+                        <input required type="text" class="form-control" id="nome" name="nome" placeholder=" ">
                         <label class="mx-3" for="camp1">Nome</label>
                     </div>
-                    <div class="form-floating col-12 col-md-12 col-xl-4">
-                        <input required type="text" class="form-control" id="camp2" name="camp2"
+                    <div class="form-floating col-12 col-md-12 col-xl-4 px-3">
+                        <input required type="email" class="form-control" id="email" name="email"
                             placeholder="Domínio" placeholder=" ">
                         <label class="mx-3" for="camp1">E-mail</label>
                     </div>
                     <div class="form-floating col-12 col-md-12 col-xl-4">
-                        <input required type="text" class="form-control" id="camp3" name="camp3"
-                            placeholder="Data de Inicio do Cliente" placeholder=" ">
+                        <input required type="number" class="form-control" id="cpf" name="cpf" placeholder=" ">
                         <label class="mx-3" for="camp1">CPF</label>
                     </div>
                 </div>
@@ -62,7 +64,6 @@
                 <div class="d-flex justify-content-between mt-3">
                     <button type="reset" class="btn btn-outline-secondary rounded-pill mx-3">Limpar</button>
                     <button type="submit" class="btn btn-success rounded-pill mx-3">Confirmar</button>
-                    <input type="hidden" id="_incluir" name="_incluir" value="_incluir">
                 </div>
             </form>
             <!-- Fim Formulário -->
@@ -72,56 +73,35 @@
         <h1 class="font-custom titulo">Nossas fotos</h1>
         <div class="row pb-5">
             <div class="col">
-                <img src="https://scontent.fpoo5-1.fna.fbcdn.net/v/t39.30808-6/320908203_562733358660620_5549688808522410105_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=730e14&_nc_ohc=-GZw_dkAWnYAX9rp5xK&_nc_ht=scontent.fpoo5-1.fna&oh=00_AfBEPePx0edva_mrduROAsOHGp4sU-3VjBg43urgd9EeSA&oe=643AAEB6"
-                    width="250px" class="rounded mx-auto d-block">
+                <img src="{{ asset('img/imagem 1.jpg') }}" width="300" style="border-radius: 100px;">
             </div>
             <div class="col">
-                <img src="https://scontent.fpoo5-1.fna.fbcdn.net/v/t39.30808-6/320908203_562733358660620_5549688808522410105_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=730e14&_nc_ohc=-GZw_dkAWnYAX9rp5xK&_nc_ht=scontent.fpoo5-1.fna&oh=00_AfBEPePx0edva_mrduROAsOHGp4sU-3VjBg43urgd9EeSA&oe=643AAEB6"
-                    width="250px" class="rounded mx-auto d-block">
+                <img src="{{ asset('img/imagem 3.jpg') }}" width="300" style="border-radius: 100px;">
             </div>
             <div class="col">
-                <img src="https://scontent.fpoo5-1.fna.fbcdn.net/v/t39.30808-6/320908203_562733358660620_5549688808522410105_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=730e14&_nc_ohc=-GZw_dkAWnYAX9rp5xK&_nc_ht=scontent.fpoo5-1.fna&oh=00_AfBEPePx0edva_mrduROAsOHGp4sU-3VjBg43urgd9EeSA&oe=643AAEB6"
-                    width="250px" class="rounded mx-auto d-block">
-            </div>
-            <div class="col">
-                <img src="https://scontent.fpoo5-1.fna.fbcdn.net/v/t39.30808-6/320908203_562733358660620_5549688808522410105_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=730e14&_nc_ohc=-GZw_dkAWnYAX9rp5xK&_nc_ht=scontent.fpoo5-1.fna&oh=00_AfBEPePx0edva_mrduROAsOHGp4sU-3VjBg43urgd9EeSA&oe=643AAEB6"
-                    width="250px" class="rounded mx-auto d-block">
+                <img src="{{ asset('img/imagem 2.jpg') }}" width="300" style="border-radius: 100px;">
             </div>
         </div>
         <div class="row pb-5">
             <div class="col">
-                <img src="https://scontent.fpoo5-1.fna.fbcdn.net/v/t39.30808-6/320908203_562733358660620_5549688808522410105_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=730e14&_nc_ohc=-GZw_dkAWnYAX9rp5xK&_nc_ht=scontent.fpoo5-1.fna&oh=00_AfBEPePx0edva_mrduROAsOHGp4sU-3VjBg43urgd9EeSA&oe=643AAEB6"
-                    width="250px" class="rounded mx-auto d-block">
+                <img src="{{ asset('img/imagem 3.jpg') }}" width="300" style="border-radius: 100px;">
             </div>
             <div class="col">
-                <img src="https://scontent.fpoo5-1.fna.fbcdn.net/v/t39.30808-6/320908203_562733358660620_5549688808522410105_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=730e14&_nc_ohc=-GZw_dkAWnYAX9rp5xK&_nc_ht=scontent.fpoo5-1.fna&oh=00_AfBEPePx0edva_mrduROAsOHGp4sU-3VjBg43urgd9EeSA&oe=643AAEB6"
-                    width="250px" class="rounded mx-auto d-block">
+                <img src="{{ asset('img/imagem 1.jpg') }}" width="300" style="border-radius: 100px;">
             </div>
             <div class="col">
-                <img src="https://scontent.fpoo5-1.fna.fbcdn.net/v/t39.30808-6/320908203_562733358660620_5549688808522410105_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=730e14&_nc_ohc=-GZw_dkAWnYAX9rp5xK&_nc_ht=scontent.fpoo5-1.fna&oh=00_AfBEPePx0edva_mrduROAsOHGp4sU-3VjBg43urgd9EeSA&oe=643AAEB6"
-                    width="250px" class="rounded mx-auto d-block">
-            </div>
-            <div class="col">
-                <img src="https://scontent.fpoo5-1.fna.fbcdn.net/v/t39.30808-6/320908203_562733358660620_5549688808522410105_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=730e14&_nc_ohc=-GZw_dkAWnYAX9rp5xK&_nc_ht=scontent.fpoo5-1.fna&oh=00_AfBEPePx0edva_mrduROAsOHGp4sU-3VjBg43urgd9EeSA&oe=643AAEB6"
-                    width="250px" class="rounded mx-auto d-block">
+                <img src="{{ asset('img/imagem 2.jpg') }}" width="300" style="border-radius: 100px;">
             </div>
         </div>
         <div class="row pb-5">
             <div class="col">
-                <img src="https://scontent.fpoo5-1.fna.fbcdn.net/v/t39.30808-6/320908203_562733358660620_5549688808522410105_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=730e14&_nc_ohc=-GZw_dkAWnYAX9rp5xK&_nc_ht=scontent.fpoo5-1.fna&oh=00_AfBEPePx0edva_mrduROAsOHGp4sU-3VjBg43urgd9EeSA&oe=643AAEB6"
-                    width="250px" class="rounded mx-auto d-block">
+                <img src="{{ asset('img/imagem 1.jpg') }}" width="300" style="border-radius: 100px;">
             </div>
             <div class="col">
-                <img src="https://scontent.fpoo5-1.fna.fbcdn.net/v/t39.30808-6/320908203_562733358660620_5549688808522410105_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=730e14&_nc_ohc=-GZw_dkAWnYAX9rp5xK&_nc_ht=scontent.fpoo5-1.fna&oh=00_AfBEPePx0edva_mrduROAsOHGp4sU-3VjBg43urgd9EeSA&oe=643AAEB6"
-                    width="250px" class="rounded mx-auto d-block">
+                <img src="{{ asset('img/imagem 2.jpg') }}" width="300" style="border-radius: 100px;">
             </div>
             <div class="col">
-                <img src="https://scontent.fpoo5-1.fna.fbcdn.net/v/t39.30808-6/320908203_562733358660620_5549688808522410105_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=730e14&_nc_ohc=-GZw_dkAWnYAX9rp5xK&_nc_ht=scontent.fpoo5-1.fna&oh=00_AfBEPePx0edva_mrduROAsOHGp4sU-3VjBg43urgd9EeSA&oe=643AAEB6"
-                    width="250px" class="rounded mx-auto d-block">
-            </div>
-            <div class="col">
-                <img src="https://scontent.fpoo5-1.fna.fbcdn.net/v/t39.30808-6/320908203_562733358660620_5549688808522410105_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=730e14&_nc_ohc=-GZw_dkAWnYAX9rp5xK&_nc_ht=scontent.fpoo5-1.fna&oh=00_AfBEPePx0edva_mrduROAsOHGp4sU-3VjBg43urgd9EeSA&oe=643AAEB6"
-                    width="250px" class="rounded mx-auto d-block">
+                <img src="{{ asset('img/imagem 3.jpg') }}" width="300" style="border-radius: 100px;">
             </div>
         </div>
     </div>

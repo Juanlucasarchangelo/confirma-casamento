@@ -16,7 +16,8 @@ use PhpParser\Node\Stmt\Return_;
 */
 
 /** Telas */
-Route::get('/', 'PrincipalController@index')->name('site.index')->middleware('log.acesso');
+Route::get('/', 'PrincipalController@index')->name('site.principal')->middleware('log.acesso');
+Route::post('/', 'PrincipalController@salvar')->name('site.principal');
 
 /** Login */
 Route::get('/login{erro?}', 'LoginController@index')->name('site.login');
