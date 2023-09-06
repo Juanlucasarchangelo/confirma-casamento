@@ -4,9 +4,7 @@
 
 @section('conteudo')
 
-    @include('site.layouts._partials.topo')
-
-    <div class="d-flex align-items-center" style="background-color: bisque; width: 100vw; height: 87vh;">
+    <div class="d-flex align-items-center" style="background-color: bisque; width: 100vw; height: 100vh;">
         <div class="col-4 container text-center" style="background-color: burlywood; padding: 80px">
             <h1 class="pb-3">Login</h1>
             <form action="{{ route('site.login') }}" method="POST">
@@ -31,7 +29,5 @@
             {{ isset($erro) && $erro != '' ? $erro : '' }}
         </div>
     </div>
-
-    @include('site.layouts._partials.footer')
 
 @endsection

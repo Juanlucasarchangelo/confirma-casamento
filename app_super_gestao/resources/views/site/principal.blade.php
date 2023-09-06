@@ -72,8 +72,8 @@
             <!-- Fim Formulário -->
             @if (isset($msg))
                 @if ($msg == 1)
-                    <div
-                        style="background-color: green; color: white; padding-top: 15px; padding-bottom: 15px; padding-left: 20px; padding-right: 20px; position: fixed; bottom: 10px; right: 10px;">
+                <div class="alert alert-success" role="alert"
+                        style="padding-top: 15px; padding-bottom: 15px; padding-left: 20px; padding-right: 20px; position: fixed; bottom: 10px; right: 10px;">
                         <p>Sua presença esta confirmada, nos vemos lá!</p>
                     </div>
                 @else

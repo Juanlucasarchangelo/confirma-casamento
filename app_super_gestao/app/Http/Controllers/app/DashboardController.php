@@ -4,12 +4,14 @@ namespace App\Http\Controllers\app;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Confirmacoes;
 
 class DashboardController extends Controller
 {
     public function index(){
-        echo "Cheguei";
 
-        return view('app.dashboard');
+        $queryConfirmacoes = Confirmacoes::get();
+
+        return view('app.dashboard', ['confirmacoes' => $queryConfirmacoes]);
     }
 }
