@@ -1,6 +1,6 @@
 @extends('app.layouts.basico')
 
-@section('titulo', 'Home')
+@section('titulo', 'Dasbboard')
 
 @section('conteudo')
 
@@ -10,7 +10,7 @@
                 <div class="col text-center">
                     <img src="{{ asset('img/logo.png') }}" width="50">
                     <h2 class="font-custom">Juan Lucas Archangelo</h2>
-                    <p>Confirmados:  {{ $confirmacoes->count() }}</p>
+                    <p>Confirmados: {{ $confirmacoes->count() }}</p>
                 </div>
             </div>
             <hr>
@@ -69,4 +69,6 @@
             </div>
         </div>
     </div>
+
+    @include('site.layouts._partials.footer')
 @endsection

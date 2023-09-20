@@ -85,7 +85,7 @@
             @endif
         </div>
     </div>
-    <div class="container px-5 paddingUB" id="fotos">
+    <div class="container pt-5" id="fotos">
         <h1 class="font-custom titulo text-center pb-5">Nossas fotos</h1>
         <div class="row pb-5">
             <div class="col">
@@ -120,6 +120,10 @@
                 <img src="{{ asset('img/imagem 3.jpg') }}" width="300" style="border-radius: 100px;">
             </div>
         </div>
+    </div>
+    <div class="container px-5 paddingUB text-center" id="fotos">
+        <h1 class="font-custom titulo pb-5">Localização</h1>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14627.079066523722!2d-46.921924!3d-23.576711!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf06ef626cbe57%3A0x5655c5e2b1f3ca11!2sEspa%C3%A7o%20Evergreen!5e0!3m2!1spt-BR!2sbr!4v1695144612894!5m2!1spt-BR!2sbr" width="1300" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
     @include('site.layouts._partials.footer')
 @endsection
