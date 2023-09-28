@@ -14,15 +14,20 @@
                 </div>
             </div>
             <hr>
-            <h2 class="font-custom col">Fornecedores</h2>
+            <div class="d-flex">
+                <h2 class="font-custom col">Fornecedores</h2>
+                <h2 class="font-custom col">Valores</h2>
+            </div>
+            @foreach($fornecedores as $fornecedor)
             <div class="row">
                 <div class="col-6">
-                    <h6>Chacara</h6>
+                    <h6>{{ $fornecedor->nome }}</h6>
                 </div>
                 <div class="col-6">
-                    <h6>00.000,00</h6>
+                    <h6>{{ $fornecedor->valor_servico }}</h6>
                 </div>
             </div>
+            @endforeach
             <hr>
         </div>
         <div class="col-9">
