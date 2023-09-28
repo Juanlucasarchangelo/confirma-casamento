@@ -17,20 +17,10 @@
             <h2 class="font-custom col">Fornecedores</h2>
             <div class="row">
                 <div class="col-6">
-                    <h6>Eddio Chacara</h6>
+                    <h6>Chacara</h6>
                 </div>
                 <div class="col-6">
-                    <h6>15.000,00</h6>
-                </div>
-            </div>
-            <hr>
-            <h2 class="font-custom col">Local da Festa</h2>
-            <div class="row">
-                <div class="col-6">
-                    <h6>Eddio Chacara</h6>
-                </div>
-                <div class="col-6">
-                    <h6>15.000,00</h6>
+                    <h6>00.000,00</h6>
                 </div>
             </div>
             <hr>
